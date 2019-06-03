@@ -20,15 +20,17 @@
     $(function() {
         let counter = 0;
         $("#loadMore").on('click', function () {
-            if  (counter > 0) {
-                $("#load").fadeIn(100);
-                $("#load").fadeOut(2000, addFragm2);
-            }
-            if (counter === 0) {
-                $("#load").fadeIn(100);
-                $("#load").fadeOut(2000, addFragm);
-                counter++;
-            }
+
+                if  (counter > 0) {
+                    $("#load").fadeIn(100);
+                    $("#load").fadeOut(2000, addFragm2);
+                }
+                if (counter === 0) {
+                    $("#load").fadeIn(100);
+                    $("#load").fadeOut(2000, addFragm);
+                    counter++;
+                }
+
             function addFragm2() {
 
                     let fragm2 = $("<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design1.jpg\" alt=\"1\"></div>\n" +
@@ -82,28 +84,29 @@
 
 (function($) {
     $(function() {
-        $('#theNavigation li').click( function(event) {
-            $('#theNavigation li').removeClass('nav-item-active');
-            $(event.target).addClass('nav-item-active');
+        function filterImage (event) {
+                $('#theNavigation li').removeClass('nav-item-active');
+                $(event.target).addClass('nav-item-active');
 
-            let thisItem    = $(this).attr('data-rel');
-            if(thisItem != "all") {
-                $('.square-img[data-rel='+thisItem+']').stop()
-                    .animate({'width' : '24.5%',
-                        'opacity' : 1,
-                    });
-                $('.square-img[data-rel!='+thisItem+']').stop()
-                    .animate({'width' : 0,
-                        'opacity' : 0,
-                    });
-            } else {
-                $('.square-img').stop()
-                    .animate({
-                        'opacity': 1,
-                        'width': '24.5%',
-                    });
-            }
-        });
+                let thisItem    = $(this).attr('data-rel');
+                if(thisItem != "all") {
+                    $('.square-img[data-rel='+thisItem+']').stop()
+                        .animate({'width' : '24.5%',
+                            'opacity' : 1,
+                        });
+                    $('.square-img[data-rel!='+thisItem+']').stop()
+                        .animate({'width' : 0,
+                            'opacity' : 0,
+                        });
+                } else {
+                    $('.square-img').stop()
+                        .animate({
+                            'opacity': 1,
+                            'width': '24.5%',
+                        });
+                }
+        }
+        $('#theNavigation li').on("click",filterImage);
     });
 })(jQuery);
 
