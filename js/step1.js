@@ -1,7 +1,7 @@
-(function($) {
-    $(function() {
+(function ($) {
+    $(function () {
 
-        $('ul.tabs-header').on('click', 'li:not(.active)', function() {
+        $('ul.tabs-header').on('click', 'li:not(.active)', function () {
             $(this)
                 .addClass("active")
                 .siblings()
@@ -16,126 +16,142 @@
     });
 })(jQuery);
 
-(function($) {
-    $(function() {
+(function ($) {
+    $(function () {
         let counter = 0;
         $("#loadMore").on('click', function () {
-
-                if  (counter > 0) {
-                    $("#load").fadeIn(100);
-                    $("#load").fadeOut(2000, addFragm2);
-                }
-                if (counter === 0) {
-                    $("#load").fadeIn(100);
-                    $("#load").fadeOut(2000, addFragm);
-                    counter++;
-                }
+            if (counter > 0) {
+                $("#load").fadeIn(100);
+                $("#load").fadeOut(2000,  function () {
+                    addFragm2(), filterImage()
+                });
+            }
+            if (counter === 0) {
+                $("#load").fadeIn(100);
+                $("#load").fadeOut(2000, function () {
+                    addFragm(), filterImage()
+                });
+                counter++;
+            }
 
             function addFragm2() {
 
-                    let fragm2 = $("<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design1.jpg\" alt=\"1\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design2.jpg\" alt=\"2\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design3.jpg\"  alt=\"3\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design4.jpg\"  alt=\"4\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design5.jpg\"  alt=\"5\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/wordpress/wordpress1.jpg\"  alt=\"6\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/wordpress/wordpress2.jpg\"  alt=\"7\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design8.jpg\"  alt=\"8\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design9.jpg\"  alt=\"9\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design10.jpg\"  alt=\"10\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design11.jpg\"  alt=\"11\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design12.jpg\" alt=\"12\"></div>");
-                    $(".square-position").append(fragm2);
-                    $('#loadMore').hide();
-                }
+                let fragm2 = $("<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design1.jpg\" alt=\"1\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design2.jpg\" alt=\"2\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design3.jpg\"  alt=\"3\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design4.jpg\"  alt=\"4\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design5.jpg\"  alt=\"5\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/wordpress/wordpress1.jpg\"  alt=\"6\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/wordpress/wordpress2.jpg\"  alt=\"7\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design8.jpg\"  alt=\"8\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design9.jpg\"  alt=\"9\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design10.jpg\"  alt=\"10\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design11.jpg\"  alt=\"11\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design12.jpg\" alt=\"12\"></div>");
+                $(".square-position").append(fragm2);
+                $('#loadMore').hide();
+            }
 
-                function addFragm () {
-                    let fragm = $("<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page1.jpg\" alt=\"1\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page2.jpg\" alt=\"2\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page3.jpg\" alt=\"3\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page4.jpg\" alt=\"4\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page5.jpg\" alt=\"5\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page6.jpg\" alt=\"6\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page7.jpg\" alt=\"7\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Web\"><img  src=\"StepProjectHam/webDesign/web-design1.jpg\" alt=\"8\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design2.jpg\" alt=\"9\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design3.jpg\" alt=\"10\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design4.jpg\"  alt=\"11\"></div>\n" +
-                        "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design5.jpg\"  alt=\"12\"></div>");
-                    $(".square-position").append(fragm);
+            function addFragm() {
+                let fragm = $("<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page1.jpg\" alt=\"1\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page2.jpg\" alt=\"2\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page3.jpg\" alt=\"3\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page4.jpg\" alt=\"4\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page5.jpg\" alt=\"5\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page6.jpg\" alt=\"6\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page7.jpg\" alt=\"7\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Web\"><img  src=\"StepProjectHam/webDesign/web-design1.jpg\" alt=\"8\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design2.jpg\" alt=\"9\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design3.jpg\" alt=\"10\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design4.jpg\"  alt=\"11\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design5.jpg\"  alt=\"12\"></div>");
+                $(".square-position").append(fragm);
 
             }
         });
 
         $('.square-img').on('mouseover', function () {
             let category = $(this).attr('data-rel');
-                $(this).append(`<div class="square-img2"><div class="square-icons"><i class="fa fa-link" aria-hidden="true"></i>'<i class="fa fa-search fa-search2" aria-hidden="true"></i></div><p class="square-paragraph">creative design</p><p class="square-paragraph-small">${category}</p></div>`);
+            $(this).append(`<div class="square-img2"><div class="square-icons"><i class="fa fa-link" aria-hidden="true"></i>'<i class="fa fa-search fa-search2" aria-hidden="true"></i></div><p class="square-paragraph">creative design</p><p class="square-paragraph-small">${category}</p></div>`);
         });
         $('.square-img').on('mouseleave', function () {
             $(this).find(".square-img2").remove();
         });
 
 
-
-        function filterImage (event) {
+        let filterState =  document.createElement('p') ;
+        filterState.setAttribute('data-rel', 'all');
+        function filterImage(event) {
+            let thisItem;
+            console.log('FILTER',filterState,'EVENT', event, 'this', this);
+            console.log(filterState, event);
+            if (event) {
+                filterState = this;
                 $('#theNavigation li').removeClass('nav-item-active');
+                thisItem = $(this).attr('data-rel');
                 $(event.target).addClass('nav-item-active');
+            } else{
 
-                let thisItem    = $(this).attr('data-rel');
-                if(thisItem != "all") {
-                    $('.square-img[data-rel='+thisItem+']').stop()
-                        .animate({'width' : '24.5%',
-                            'opacity' : 1,
-                        });
-                    $('.square-img[data-rel!='+thisItem+']').stop()
-                        .animate({'width' : 0,
-                            'opacity' : 0,
-                        });
-                } else {
-                    $('.square-img').stop()
-                        .animate({
-                            'opacity': 1,
-                            'width': '24.5%',
-                        });
-                }
+                thisItem = filterState.getAttribute('data-rel');
+            }
+            if (thisItem != "all") {
+                $('.square-img[data-rel=' + thisItem + ']').stop()
+                    .animate({
+                        'width': '24.5%',
+                        'opacity': 1,
+                    });
+                $('.square-img[data-rel!=' + thisItem + ']').stop()
+                    .animate({
+                        'width': 0,
+                        'opacity': 0,
+                    });
+            } else {
+                $('.square-img').stop()
+                    .animate({
+                        'opacity': 1,
+                        'width': '24.5%',
+                    });
+            }
         }
-        $('#theNavigation li').on("click",filterImage);
+
+        $('#theNavigation li').on("click", filterImage);
     });
 })(jQuery);
 
-    $(function () {
+$(function () {
 
-        $("#point li:first-child").addClass("theActive").animate({'bottom': +20 +'%'}, 500);
+    $("#point li:first-child").addClass("theActive").animate({'bottom': +20 + '%'}, 500);
 
-        function slide(target) {
-            $("#point li").removeClass("theActive").eq(target).addClass("theActive");
-            $("#point li.theActive").animate({'bottom': +20 +'%'}, 500);
-            $("#slider ul li").animate({'right': +174 * target + 'px'}, 250);
-        }
-        $("#point li").click(function() {
-            let target = $(this).index();
-            slide(target);
-        });
-        $("#next").click(function() {
-            let target = $("#point li.theActive").index();
-            if (target == $("#point li").length - 1) {
-                target = -1;
-            }
-            target = target + 1;
-            slide(target);
+    function slide(target) {
+        $("#point li").removeClass("theActive").eq(target).addClass("theActive");
+        $("#point li.theActive").animate({'bottom': +20 + '%'}, 500);
+        $("#slider ul li").animate({'right': +174 * target + 'px'}, 250);
+    }
 
-        });
-        $("#prev").click(function() {
-            let target = $("#point li.theActive").index();
-            if (target == 0) {
-                target = $("#point li").length;
-            }
-            target = target - 1;
-            slide(target);
-        });
+    $("#point li").click(function () {
+        let target = $(this).index();
+        slide(target);
     });
+    $("#next").click(function () {
+        let target = $("#point li.theActive").index();
+        if (target == $("#point li").length - 1) {
+            target = -1;
+        }
+        target = target + 1;
+        slide(target);
 
-(function($) {
+    });
+    $("#prev").click(function () {
+        let target = $("#point li.theActive").index();
+        if (target == 0) {
+            target = $("#point li").length;
+        }
+        target = target - 1;
+        slide(target);
+    });
+});
+
+(function ($) {
     $(function () {
         let count2 = 0;
         $('.grid').masonry({
@@ -166,6 +182,7 @@
             }, 1400);
 
         }
+
         $('#loadMore2').on('click', loadMoreGalleryImages);
 
         function getItemElement() {

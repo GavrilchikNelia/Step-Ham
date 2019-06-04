@@ -366,6 +366,7 @@
 .square-position {
     display: flex;
     flex-flow: row wrap;
+    padding: 50px;
 }
 .square-img {
     width: 24.5%;
