@@ -65,12 +65,8 @@
                     $(".square-position").append(fragm);
 
             }
-        })
-    });
-})(jQuery);
+        });
 
-(function($) {
-    $(function(){
         $('.square-img').on('mouseover', function () {
             let category = $(this).attr('data-rel');
                 $(this).append(`<div class="square-img2"><div class="square-icons"><i class="fa fa-link" aria-hidden="true"></i>'<i class="fa fa-search fa-search2" aria-hidden="true"></i></div><p class="square-paragraph">creative design</p><p class="square-paragraph-small">${category}</p></div>`);
@@ -78,12 +74,9 @@
         $('.square-img').on('mouseleave', function () {
             $(this).find(".square-img2").remove();
         });
-    })
 
-})(jQuery);
 
-(function($) {
-    $(function() {
+
         function filterImage (event) {
                 $('#theNavigation li').removeClass('nav-item-active');
                 $(event.target).addClass('nav-item-active');
