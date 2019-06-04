@@ -40,30 +40,30 @@
                     "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design2.jpg\" alt=\"2\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design3.jpg\"  alt=\"3\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design4.jpg\"  alt=\"4\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design5.jpg\"  alt=\"5\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/graphicDesign/graphic-design5.jpg\"  alt=\"5\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/wordpress/wordpress1.jpg\"  alt=\"6\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/wordpress/wordpress2.jpg\"  alt=\"7\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design8.jpg\"  alt=\"8\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design9.jpg\"  alt=\"9\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Web\"><img  src=\"StepProjectHam/graphicDesign/graphic-design9.jpg\"  alt=\"9\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/graphicDesign/graphic-design10.jpg\"  alt=\"10\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design11.jpg\"  alt=\"11\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Graphic\"><img  src=\"StepProjectHam/graphicDesign/graphic-design12.jpg\" alt=\"12\"></div>");
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img  src=\"StepProjectHam/graphicDesign/graphic-design11.jpg\"  alt=\"11\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Landing\"><img  src=\"StepProjectHam/graphicDesign/graphic-design12.jpg\" alt=\"12\"></div>");
                 $(".square-position").append(fragm2);
                 $('#loadMore').hide();
             }
 
             function addFragm() {
                 let fragm = $("<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page1.jpg\" alt=\"1\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page2.jpg\" alt=\"2\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page3.jpg\" alt=\"3\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page4.jpg\" alt=\"4\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/landingPage/landing-page2.jpg\" alt=\"2\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/landingPage/landing-page3.jpg\" alt=\"3\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Graphic\"><img src=\"StepProjectHam/landingPage/landing-page4.jpg\" alt=\"4\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page5.jpg\" alt=\"5\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page6.jpg\" alt=\"6\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Landing\"><img src=\"StepProjectHam/landingPage/landing-page7.jpg\" alt=\"7\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Web\"><img  src=\"StepProjectHam/webDesign/web-design1.jpg\" alt=\"8\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design2.jpg\" alt=\"9\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design3.jpg\" alt=\"10\"></div>\n" +
-                    "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design4.jpg\"  alt=\"11\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/webDesign/web-design3.jpg\" alt=\"10\"></div>\n" +
+                    "<div class=\"square-img\" data-rel=\"Wordpress\"><img src=\"StepProjectHam/webDesign/web-design4.jpg\"  alt=\"11\"></div>\n" +
                     "<div class=\"square-img\" data-rel=\"Web\"><img src=\"StepProjectHam/webDesign/web-design5.jpg\"  alt=\"12\"></div>");
                 $(".square-position").append(fragm);
 

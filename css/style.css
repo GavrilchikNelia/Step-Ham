@@ -368,8 +368,12 @@
     flex-flow: row wrap;
     padding: 50px;
 }
+.square-img img {
+    width: 265px;
+    height: 207px;
+}
 .square-img {
-    width: 24.5%;
+    width: 265px;
     height: 207px;
     position: relative;
 }
